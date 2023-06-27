@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // VARIABLES
 
-  const DATE_TARGET = new Date('05/27/2024 2:00 PM')
+  const DATE_TARGET = new Date('03/02/2024 2:00 PM')
 
   // DOM for render
 

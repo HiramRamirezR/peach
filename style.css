@@ -1,5 +1,6 @@
 @charset "UTF-8";
 body {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   height: 130vh;
   background-image: url("/images/bg.png");
@@ -27,15 +28,16 @@ body {
 .container .btns {
   width: 100%;
   height: 3rem;
-  background-color: #ffd500;
+  background-color: #ff55d2;
+  box-shadow: 0 0 10px #000000;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .container .btns a {
   color: #ffffff;
-  font-size: 2rem;
-  text-shadow: 0 0 5px #ff8800;
+  font-size: 1.8rem;
+  text-shadow: 0 0 5px #d839ae;
 }
 .container .bg {
   width: 100vw;
@@ -50,14 +52,13 @@ body {
 }
 .container .cumple {
   width: 90%;
-  font-family: "Nes Controller", sans-serif;
+  font-family: "Toon-City", sans-serif;
   font-size: 4.5rem;
   font-weight: 900;
   z-index: 2;
   text-align: center;
-  color: #ffbf00;
+  color: #ff55d2;
   margin: 0;
-  text-shadow: 0 0 10px #1c1a1a;
 }
 .container .personajes {
   width: 75%;
@@ -65,7 +66,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 20%;
-  z-index: 6;
+  z-index: 2;
 }
 .container .personajes img {
   width: 70%;
@@ -83,10 +84,12 @@ body {
   opacity: 0.8;
 }
 .container .modalInvitacion p {
+  margin-top: 0;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2.5rem;
   padding: 0.5rem;
+  color: #ff55d2;
 }
 .container .modalContador {
   background-color: white;
