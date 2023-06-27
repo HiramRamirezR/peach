@@ -262,6 +262,7 @@ td {
   }
   .container .personajes {
     width: 25%;
+    margin-top: 0;
   }
   .container .star {
     position: absolute;
