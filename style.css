@@ -93,6 +93,25 @@ body {
   padding: 0.5rem;
   color: #ff55d2;
 }
+.container .modalConfirmar {
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  height: 35%;
+  z-index: 3;
+  opacity: 0.8;
+}
+.container .modalConfirmar a {
+  color: #d839ae;
+  font-size: 3rem;
+}
+.container .modalConfirmar p {
+  color: #d839ae;
+  font-size: 1.5rem;
+}
 .container .modalContador {
   background-color: white;
   border-radius: 10px;
@@ -266,11 +285,11 @@ td {
   }
   .container .star {
     position: absolute;
-    left: 46%;
+    left: 47%;
     top: 22%;
-    width: 8%;
+    width: 6%;
   }
   .divBanner img {
-    height: 30px;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

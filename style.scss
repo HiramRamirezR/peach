@@ -111,6 +111,28 @@ body  {
     }
   }
 
+  .modalConfirmar {
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    height: 35%;
+    z-index: 3;
+    opacity: .8;
+
+    a {
+      color: #d839ae;
+      font-size: 3rem;
+    }
+
+    p {
+      color: #d839ae;
+      font-size: 1.5rem;
+    }
+  }
+
   .modalContador {
     background-color: white;
     border-radius: 10px;
@@ -319,9 +341,9 @@ td {
 
     .star {
       position: absolute;
-      left: 46%;
+      left: 47%;
       top: 22%;
-      width: 8%;
+      width: 6%;
     }
 
   }
@@ -329,7 +351,7 @@ td {
   .divBanner {
 
     img {
-      height: 30px;
+      width: 100%;
     }
 
   }

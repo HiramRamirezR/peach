@@ -5,7 +5,9 @@ const play = document.querySelector('.play')
 const pause = document.querySelector('.pause')
 const fecha = document.querySelector('.fecha')
 const invitacion = document.querySelector('.invitacion')
+const confirmar = document.querySelector('.confirmar')
 const modalInvitacion = document.querySelector('.modalInvitacion')
+const modalConfirmar = document.querySelector('.modalConfirmar')
 const modalContador = document.querySelector('.modalContador')
 const star = document.querySelector('.star')
 const chars = document.querySelector('.chars')
@@ -62,12 +64,35 @@ pause.addEventListener('click', () => {
 invitacion.addEventListener('click', () => {
   modalInvitacion.classList.toggle('hidden')
   modalContador.classList.add('hidden')
+  modalConfirmar.classList.add('hidden')
+  modalConfirmar.style.display = 'none';
   star.classList.add('hidden')
+})
+
+confirmar.addEventListener('click', () => {
+
+  if (modalConfirmar.classList.contains('hidden')) {
+    modalConfirmar.classList.remove('hidden')
+    modalConfirmar.style.display = 'flex';
+    modalConfirmar.style.justifyContent = 'space-around';
+    modalConfirmar.style.alignItems = 'center';
+    modalInvitacion.classList.add('hidden')
+    modalContador.classList.add('hidden')
+    star.classList.add('hidden')
+  } else {
+    modalConfirmar.classList.add('hidden')
+    modalConfirmar.style.display = 'none';
+    modalInvitacion.classList.add('hidden')
+    modalContador.classList.add('hidden')
+    star.classList.add('hidden')
+  }
 })
 
 fecha.addEventListener('click', () => {
   modalContador.classList.toggle('hidden')
   modalInvitacion.classList.add('hidden')
+  modalConfirmar.classList.add('hidden')
+  modalConfirmar.style.display = 'none';
   star.classList.toggle('hidden')
 })
 
