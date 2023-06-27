@@ -248,22 +248,28 @@ td {
   }
 }
 @media (min-width: 500px) {
-  .container .supermario {
+  .container .superpeach {
     margin-top: 5%;
     width: 30%;
   }
   .container .cumple {
-    font-size: 8rem;
+    font-size: 5rem;
     font-weight: 900;
     z-index: 2;
     text-align: center;
-    color: #ffbf00;
+    color: #ff55d2;
     text-shadow: 0 0 10px #1c1a1a;
   }
   .container .personajes {
-    width: 30%;
+    width: 25%;
+  }
+  .container .star {
+    position: absolute;
+    left: 46%;
+    top: 22%;
+    width: 8%;
   }
   .divBanner img {
-    height: 80px;
+    height: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

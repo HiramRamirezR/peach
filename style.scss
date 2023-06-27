@@ -297,23 +297,30 @@ td {
 
   .container {
 
-    .supermario {
+    .superpeach {
       margin-top: 5%;
       width: 30%;
     }
 
     .cumple {
-      font-size: 8rem;
+      font-size: 5rem;
       font-weight: 900;
       z-index: 2;
       text-align: center;
-      color:#ffbf00;
+      color:#ff55d2;
       // -webkit-text-stroke: .1rem #000000;
       text-shadow: 0 0 10px #1c1a1a;
     }
 
     .personajes {
-      width: 30%;
+      width: 25%;
+    }
+
+    .star {
+      position: absolute;
+      left: 46%;
+      top: 22%;
+      width: 8%;
     }
 
   }
@@ -321,7 +328,7 @@ td {
   .divBanner {
 
     img {
-      height: 80px;
+      height: 30px;
     }
 
   }
