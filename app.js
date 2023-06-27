@@ -8,19 +8,50 @@ const invitacion = document.querySelector('.invitacion')
 const modalInvitacion = document.querySelector('.modalInvitacion')
 const modalContador = document.querySelector('.modalContador')
 const star = document.querySelector('.star')
+const chars = document.querySelector('.chars')
+const bgs = document.querySelector('.bgs')
 
 const peach = document.querySelector('.peach')
+const dialogos = ['/audio/peach1.mp3', '/audio/peach2.mp3', '/audio/peach3.mp3', '/audio/peach4.mp3']
+let diag = Math.floor(Math.random() * 4)
+let peachSound = new Audio(dialogos[diag])
 
-const musicas = ['/audio/musica.mp3', '/audio/musica2.mp3', '/audio/musica3.mp3']
-const musica = new Audio(musicas[Math.floor(Math.random() * musicas.length)])
-const peaches = ['/audio/peach.mp3', '/audio/peach2.mp3']
-const peachSound = new Audio(peaches[Math.floor(Math.random() * peaches.length)])
+const musicas = ['/audio/musica3.mp3', '/audio/musica2.mp3', '/audio/musica1.mp3']
+let pista = Math.floor(Math.random() * 3)
+let musica = new Audio(musicas[pista])
+
 
 play.addEventListener('click', () => {
-  musica.play()
-  aPlay.classList.add('hidden')
-  aPause.classList.toggle('hidden')
+  musica.addEventListener('ended', () => {
+    pista++;
+    if (pista < musicas.length) {
+      musica.src = musicas[pista];
+    } else {
+      pista = 0;
+      musica.src = musicas[pista];
+    }
+  });
+
+  musica.play();
+  aPlay.classList.add('hidden');
+  aPause.classList.remove('hidden');
+});
+
+peach.addEventListener('click', () => {
+  peachSound.addEventListener('ended', () => {
+    peach.classList.remove('bounce-out-top')
+    diag++;
+    if (diag < dialogos.length) {
+      peachSound.src = dialogos[diag];
+    } else {
+      diag = 0;
+      peachSound.src = dialogos[diag];
+    }
+  })
+  peachSound.play()
+  peach.classList.add('bounce-out-top')
 })
+
 
 pause.addEventListener('click', () => {
   musica.pause()
@@ -40,7 +71,20 @@ fecha.addEventListener('click', () => {
   star.classList.toggle('hidden')
 })
 
-peach.addEventListener('click', () => {
-  peachSound.play()
-  peach.classList.add('bounce-out-top')
+let num = 1
+chars.addEventListener('click', () => {
+  num++
+  if (num > 6) {
+    num = 1
+  }
+  peach.src = `/images/peach${num}.${'png'}`
+})
+
+let bg = 1
+bgs.addEventListener('click', () => {
+  bg++
+  if (bg > 2) {
+    bg = 1
+  }
+  document.body.style.backgroundImage = `url(/images/bg${bg}.${'png'})`
 })

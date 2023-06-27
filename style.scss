@@ -3,7 +3,7 @@ body  {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   height: 130vh;
-  background-image: url('/images/bg.png');
+  background-image: url('/images/bg1.png');
   background-size:cover;
   -webkit-animation: slidein 10s;
   animation: slidein 10s;
@@ -135,7 +135,7 @@ body  {
   }
 
   .contador {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 59, 167);
     position: absolute;
     width: 100%;
     top: 45%;
